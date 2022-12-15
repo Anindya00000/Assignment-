@@ -2,10 +2,10 @@
 package com;
 
 import java.util.*;
-public class AlphabetOrNot {
-
-	public static void main(String[] args)
-	{
+public class AlphabetOrNot 
+{
+   public static void main(String[] args)
+   {
 		Scanner sc = new Scanner(System.in);
 		char c;
 		System.out.print("Enter a Character: ");
@@ -18,5 +18,5 @@ public class AlphabetOrNot {
         {
         	System.out.println("The character is not an alphabet");
         }
-	}
+   }
 }
