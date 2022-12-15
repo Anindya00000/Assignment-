@@ -11,11 +11,11 @@ public class VowelOrConsonant
 		Scanner sc = new Scanner(System.in);
 		char y;
 		System.out.print("Enter a Character: ");
-        y=sc.next().charAt(0);
-        if (y == 'a' || y == 'e' || y == 'i' || y == 'o'|| y == 'u' || y == 'A' || y == 'E' || y == 'I'|| y == 'O' || y == 'U')
-            System.out.println("It is a Vowel.");
-        else
-            System.out.println("It is a Consonant.");
+                y=sc.next().charAt(0);
+                if (y == 'a' || y == 'e' || y == 'i' || y == 'o'|| y == 'u' || y == 'A' || y == 'E' || y == 'I'|| y == 'O' || y == 'U')
+                   System.out.println("It is a Vowel.");
+                else
+                   System.out.println("It is a Consonant.");
 	}
 
 }
