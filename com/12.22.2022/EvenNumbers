@@ -5,10 +5,10 @@ public class EvenNumbers
    {  
       Scanner sc = new Scanner(System.in);
       int sum=0;	  
-	    System.out.print("Enter the First Number of the range:  ");
-	    int i=sc.nextInt();
-	    System.out.print("\nEnter the Last Number of the range:  ");
-	    int number=sc.nextInt();
+      System.out.print("Enter the First Number of the range:  ");
+      int i=sc.nextInt();
+      System.out.print("\nEnter the Last Number of the range:  ");
+      int number=sc.nextInt();
       System.out.print("\nList of even numbers from "+i+" to "+number+": ");  
       for (;i<=number;i++)   
       {  
