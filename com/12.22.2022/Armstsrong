@@ -1,0 +1,26 @@
+import java.util.Scanner;  
+public class Armstsrong
+{  
+    public static void main(String args[])
+	  {  
+	     Scanner sc = new Scanner(System.in);
+       int i,f,d=0,t,p,sum=0; 
+       System.out.print("Enter an Integer Number: ");	   
+       int n=t=p=sc.nextInt();
+	     while(t>0)    
+       {     
+          t = t/10;   
+          d++;   
+       }   
+       while(p>0)    
+       {       
+          f= p % 10;   
+          sum +=(int)(Math.pow(f,d));   
+          p = p/10;   
+       }  
+	     if(n==sum)    
+          System.out.println("Armstsrong number ");    
+       else    
+          System.out.println("Not Armstsrong");
+   }   
+}
