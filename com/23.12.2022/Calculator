@@ -1,0 +1,83 @@
+//Calculator
+package com;
+import java.util.*;
+
+public class Calculator 
+{ 
+	public static int addition(int a,int b)
+	{
+		int result = a+b;
+		return result;
+	}
+	public static int subtraction(int a,int b)
+	{
+		int c;
+		if(a>b)
+		{
+			c=a-b;
+		}
+		else
+		{
+			c=b-a;
+		}
+		return c;
+	}
+	public static int multiplication(int a,int b)
+	{
+	   return(a*b);	
+	}
+	public static float division(float a,float b)
+	{
+		return (a/b);
+	}
+	
+  public static void main(String[] args)
+  {
+    	int choice,num1,num2,res;
+    	Scanner sc = new Scanner(System.in);
+    	do{
+    	System.out.print("Which operation do you want to prefere:- \n1>Addition 2>Subtraction 3>Multiplication 4>Division \nPress 5 for exit - ");
+        choice=sc.nextInt();
+        switch(choice)
+        {
+           case 1:
+        	   System.out.print("\nEnter first digit: ");
+        	   num1 = sc.nextInt();
+        	   System.out.print("\nEnter second digit: ");
+        	   num2=sc.nextInt();
+        	   res=Calculator.addition(num1,num2);
+        	   System.out.println(num1+" + "+num2+" = "+res+"\n");
+           break;
+           case 2:
+        	   System.out.print("\nEnter first digit: ");
+        	   num1 = sc.nextInt();
+        	   System.out.print("\nEnter second digit: ");
+        	   num2=sc.nextInt();
+        	   res=Calculator.subtraction(num1,num2);
+        	   System.out.println(num1+" - "+num2+" = "+res+"\n");
+           break;
+           case 3:
+        	   System.out.print("\nEnter first digit: ");
+        	   num1 = sc.nextInt();
+        	   System.out.print("\nEnter second digit: ");
+        	   num2=sc.nextInt();
+        	   res=Calculator.multiplication(num1,num2);
+        	   System.out.println(num1+" * "+num2+" = "+res+"\n");
+           break;
+           case 4:
+        	   System.out.print("\nEnter first digit: ");
+        	   float no1 = sc.nextFloat();
+        	   System.out.print("\nEnter second digit: ");
+        	   float no2=sc.nextFloat();
+        	   float result=Calculator.division(no1,no2);
+        	   System.out.println(no1+"/"+no2+" = "+result+"\n");
+           break;
+           case 5:
+           break;  
+		       default:
+			       System.out.println("\n--Invalid Choice--\n");
+        }
+      }while(choice!=5);  
+    	
+    }
+}
