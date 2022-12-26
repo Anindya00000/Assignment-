@@ -3,8 +3,8 @@
 package com;
 import java.util.*;
 public class Bank 
-{
-	  public static float deposit(float balance,float depo)
+{ 
+    public static float deposit(float balance,float depo)
     {
       balance=balance+depo;
       return (balance);
