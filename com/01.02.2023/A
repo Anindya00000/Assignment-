@@ -1,3 +1,15 @@
+/*
+     [a]
+    ^   ^
+   /     \
+[b]	  [c]      
+   \     / 
+    v   v
+     [d]
+*/
+
+
+
 package com;
 
 interface intr1   //1st interface
