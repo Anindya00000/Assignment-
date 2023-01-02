@@ -30,7 +30,7 @@ class derive implements inter2,inter22 //the class 'derive' implements 1st & 2nd
 }
 public class A  //Main class where 'main method' exists 
 {
-	public static void main(String[] args)
+    public static void main(String[] args)
     {
 	   derive ob = new derive();
    	   System.out.printf("a=%d & b=%d \nAddition=%d "
