@@ -1,0 +1,59 @@
+package com;
+import java.util.Scanner;  
+class Demo
+{   
+	  int ch=0;
+	   Scanner sc = new Scanner(System.in);
+	   public void stream()
+	   {
+		   do
+		   {
+			   System.out.print("\nStream:\n 1.Computer Science 2.Electrial 3.Machenical \n Enter Your Choice: ");
+	           int n = sc.nextInt();
+	           switch(n)
+	           {
+	        	   case 1:
+	        		   System.out.println("\n1.Subject-1 \n2.Subject-2 \n3.Subject-3 \n4.Subject-4");
+	        		   ch=choice();
+	        	   break;
+	        	   case 2:
+	        		   System.out.println("\n1.Subject-1 \n2.Subject-2 \n3.Subject-3 \n4.Subject-4");
+	        		   ch=choice();
+	        	   break;
+	        	   case 3:
+	        		   System.out.println("\n1.Subject-1 \n2.Subject-2");
+	        		   ch=choice();
+	        	   break;
+	        	   default:
+	            	   System.out.println("\nInvalid Choice");
+	           }
+		   }while(ch!=1);
+	   }
+	   public int choice()
+	   {
+		   System.out.println("\nAre You Sure to Select this Stream: ");
+		   String value= sc.next();
+		   if(value.equals("yes"))
+		   {
+			   return 1;
+		   }
+		   else
+		   {
+			   return 0;
+		   }
+	   }
+	   public void disp()
+	   {
+		   if(ch==1)
+			   System.out.println("\nCongratulations");
+	   }
+}
+public class Stream 
+{
+	public static void main(String []args)
+	{
+	   Demo ob= new Demo();
+	   ob.stream();
+	   ob.disp();
+	}
+}
