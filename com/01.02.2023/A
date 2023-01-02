@@ -1,0 +1,39 @@
+package com;
+
+interface intr1   //1st interface
+{
+	int a=5,b=6;
+	public int add();
+}
+interface inter2 extends  intr1 //2nd interface extends 1st interface
+{
+	public int sub();
+}
+interface inter22 extends intr1 //3rd interface extends 1st interface
+{
+	public int multi();
+}
+class derive implements inter2,inter22 //the class 'derive' implements 1st & 2nd interfaces
+{
+     public int add()
+     {
+    	return(a+b);
+     }
+     public int sub()
+     {
+    	 return(a-b);
+     }
+     public int multi()
+     {
+    	 return(a*b);
+     }
+}
+public class A  //Main class where 'main method' exists 
+{
+	public static void main(String[] args)
+    {
+	   derive ob = new derive();
+   	   System.out.printf("a=%d & b=%d \nAddition=%d "
+   	 		+ "\nSubtraction=%d \nMultiplication=%d",ob.a,ob.b,ob.add(),ob.sub(),ob.multi());
+    }
+}
