@@ -1,0 +1,31 @@
+package com;
+
+import java.util.Scanner;
+
+public class Ceo_in_array //Main class where 'main method' exists 
+{
+	public static void main(String []args)
+	{ 
+	   int arr[];  //create array
+	   int odd=0,even=0;
+	   Scanner sc = new Scanner(System.in);
+	   System.out.println("Enter the number of Elements: ");
+	   int n=sc.nextInt();
+	   arr=new int [n];
+	   System.out.println("Enter the Elements:");
+	   for(int i=0;i<n;i++)
+	   {
+		   arr[i]=sc.nextInt();
+		   if (arr[i] % 2 == 0)
+	            even++;
+	       else
+	            odd++;
+	   }
+	   System.out.println("Array Elements are:");
+	   for(int i=0;i<arr.length;i++){
+		   System.out.print(arr[i]+" ");
+	   }
+	   System.out.println("\nNumber of odd Numbers present in the array: "+odd);
+	   System.out.println("Number of even Numbers present in the array: "+even);
+	}
+}
