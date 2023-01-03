@@ -76,7 +76,7 @@ public class EmpDemo /*Main class where 'main method' exists*/
 
 	public static void main(String[] args) 
 	{
-		 employee ob=new employee();//creating object of EmpDetails class
+		 employee ob=new employee();//creating object of employee class
 		 ob.setData();
 		 ob.getAppraisal();
 		 ob.calculateTA();
