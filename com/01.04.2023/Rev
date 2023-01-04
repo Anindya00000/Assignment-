@@ -1,0 +1,36 @@
+// reverse an array
+package com;
+
+public class Rev //Main class where 'main method' exists 
+{
+	static void rvereseArray(int arr[],int start, int end)/* Function to reverse Array*/
+	{
+		int temp;
+		
+		while (start < end)
+		{
+			temp = arr[start];
+			arr[start] = arr[end];
+			arr[end] = temp;
+			start++;
+			end--;
+		}
+	}
+	static void printArray(int arr[],int size)//to print an array
+	{
+		for (int i = 0; i < size; i++)
+			System.out.print(arr[i] + " ");
+		
+		System.out.println();
+	}
+	public static void main(String args[]) 
+	{
+		
+		int arr[] = {55,66,33,44,11};
+		printArray(arr, 5);
+		rvereseArray(arr, 0, 4);
+		System.out.print("Reversed array is \n");
+		printArray(arr, 5);
+		
+	}
+}
