@@ -1,0 +1,57 @@
+package com;
+import java.util.*;
+public class Mtrt
+{
+   int [][] Mat1;
+   int [][] Mat2;
+   int [][] addi = new int [100][100];
+   Scanner sc = new Scanner(System.in); 
+   int r1,c1,r2,c2;
+   int addiT=0;
+   void get_size()  //get the size of 2 array
+   {
+      System.out.print("Enter the value of row and column of Matrix 1 : ");
+      r1=sc.nextInt();
+      c1=sc.nextInt();
+      System.out.print("Enter the value of row and column of Matrix 2 : ");
+      r2=sc.nextInt();
+      c2=sc.nextInt();
+      Mat1 = new int [r1][c1];
+      Mat2 = new int [r2][c2];
+   }
+   void get_value()  ////get the value of 2 array
+   { 
+     System.out.println("Enter The Value Of 1st Matrix :");
+     for(int i=0;i<r1;i++)
+     {   
+         for(int j=0;j<c1;j++)
+         {
+            System.out.printf("[%d] [%d] :",i,j);
+            Mat1[i] [j] = sc.nextInt();
+         }
+         System.out.println();
+     }
+     System.out.println("\nEnter The Value Of 2nd Matrix :");
+     for(int i=0;i<r2;i++)
+     {
+          for(int j=0;j<c2;j++)
+          {
+             System.out.printf("[%d] [%d] :",i,j);
+             Mat2[i] [j] = sc.nextInt();
+          }
+          System.out.println();
+     }
+    }
+     void arith_operat() //check the possibility to  perform addition
+     {
+        if(r1==r2 && c1==c2)
+        {
+          System.out.printf("\nAddition is possible .\n");
+          addiT=1;
+        }
+        else
+        {
+          System.out.printf("\nAddition is not possible .\n");
+        }
+     }
+}
