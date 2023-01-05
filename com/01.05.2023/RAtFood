@@ -1,0 +1,44 @@
+package com;
+
+import java.util.Scanner;
+
+public class RAtFood 
+{
+	public static void main(String args [])
+	{
+	    int r,n,unit,i,re=0;
+	    int []arr;
+	    Scanner ob =new Scanner(System.in);
+	    System.out.print("Enter the value of r:");
+	    r=ob.nextInt();
+	    System.out.print("Enter the value of unit:");
+	    unit=ob.nextInt();
+	    System.out.print("Enter the value of n:");
+	    n=ob.nextInt();
+	    arr= new int[n];
+	    System.out.println(); 
+	    System.out.println("Enter The Value Of arr:");
+	    for(i=0;i<n;i++)
+	    {
+	         arr[i]= ob.nextInt();
+	    }
+	    System.out.println("Output: "+(RAtFood.Op(r,unit,arr,n)));
+	    
+	 }
+	 public static int cal(int r,int u)
+	 {
+		 return(r*u);
+	 }
+	 public static int Op(int r,int u,int a[],int n)
+	 {
+		 int req=RAtFood.cal(r,u);
+		 int sum=0,i;
+		 for(i=0;i<n;i++)
+		 {
+			 sum+=a[i];
+			 if(sum>=req)
+				 break;
+		 }
+		 return(i+1);
+	 } 
+}
