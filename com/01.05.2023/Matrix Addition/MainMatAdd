@@ -1,0 +1,17 @@
+package com;
+
+public class MainMatAdd //Main class where 'main method' exists 
+{
+	public static void main (String args [])
+	{
+	  Matrix ob = new Matrix();
+	  ob.get_size();
+	  ob.arith_operat();
+	  if(ob.addiT==1)
+	  {
+	    ob.get_value();
+	    ob.addition();
+	    ob.addition_show();
+	  }
+	}
+}
