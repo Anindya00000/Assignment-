@@ -1,0 +1,63 @@
+package com;
+import java.util.*;
+class CharCountDemo 
+{
+	int i, j, k = 0, count = 0;
+    String str ;
+    Scanner sc = new Scanner(System.in);
+    String uni = new String("");
+    
+    void getInput()// input the string 
+    {
+        System.out.print("Enter a String: ");
+        str = sc.nextLine();
+    }
+    
+    void CharCal() // calculate the repeated character and reduce the size of this string and Show the result
+    {
+        for(i=0; i<str.length(); i++)
+        {
+            count = 0;
+            for(j=0; j<=i; j++)
+            {
+                if(str.charAt(i)==str.charAt(j))
+                {
+                    count++;
+                }
+            }
+            if(count==1)
+            {
+                uni = uni + str.charAt(i);
+            }
+        }
+        System.out.print("\nOutput: ");
+        for(i=0; i<uni.length(); i++)
+        {
+            count = 0;
+            for(j=0; j<str.length(); j++)
+            {
+                if(uni.charAt(i)==str.charAt(j))
+                {
+                    count++;
+                }
+            }
+            if(count==1)
+            {
+                System.out.printf("%c",uni.charAt(i));
+            }
+            else
+            {
+                System.out.printf("%c%d",uni.charAt(i),count);
+            }
+         }
+    }
+}
+public class CharCount //Main class where 'main method' exists 
+{
+	public static void main(String []args)
+	{
+		CharCountDemo ob = new CharCountDemo();
+		ob.getInput();
+		ob.CharCal();
+	}
+}
