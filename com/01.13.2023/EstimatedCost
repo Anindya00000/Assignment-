@@ -1,0 +1,78 @@
+/*We want to estimate the cost of painting a property. Interior wall painting cost is Rs.18 per sq.ft. and exterior wall painting cost is Rs.12 per sq.ft.
+
+Take input as
+1. Number of Interior walls
+2. Number of Exterior walls
+3. Surface Area of each Interior 4. Wall in units of square feet
+Surface Area of each Exterior Wall in units of square feet
+
+If a user enters zero  as the number of walls then skip Surface area values as User may don’t  want to paint that wall.
+
+Calculate and display the total cost of painting the property
+Example 1:
+6
+3
+12.3
+15.2
+12.3
+15.2
+12.3
+15.2
+10.10
+10.10
+10.00
+Total estimated Cost : 1847.4 INR
+Note: Follow in input and output format as given in above example
+
+*/
+
+package com;
+
+import java.util.Scanner;
+class EstimatedCostDemo 
+{
+	int niw, neW, i = 0;
+    float intP = 18, extP = 12, cost = 0, temp;
+    Scanner sc = new Scanner(System.in);
+    void getInput() //to take input
+    {
+       System.out.println("Enter Number of Interior walls: ");
+       niw = sc.nextInt();
+       System.out.println("Enter Number of Exterior walls: ");
+       neW = sc.nextInt();
+       showData();
+    }
+    void showData()// calculate the cost and show display it
+    {
+       if(niw < 0 || neW < 0) 
+       {
+           System.out.print("INVALID INPUT");
+       } 
+       else if(niw == 0 && neW == 0) 
+       {
+           System.out.print("Total estimated Cost : 0.0");
+       } 
+       else 
+       {
+    	   System.out.println("Enter Surface Area of each Interior Interior walls : ");
+    	   for(i = 0; i < niw; i++) {
+               temp = sc.nextFloat();
+               cost += intP * temp;
+           }
+    	   System.out.println("Enter Surface Area of each Interior Interior walls : ");
+           for(i = 0; i < neW; i++) {
+               temp = sc.nextFloat();
+               cost += extP * temp;
+           }
+           System.out.printf("Total estimated Cost : %.1f", cost);
+       }
+    }
+}
+
+public class EstimatedCost //Main class where 'main method' exists
+{
+	public static void main(String[] args)
+	{
+	   new EstimatedCostDemo().getInput();
+	}
+}
